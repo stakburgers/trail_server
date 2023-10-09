@@ -31,7 +31,7 @@ var trailCoordinates = [
     [-36.73060, 174.69354], 
     [-36.72855, 174.69320], 
 ];
-
+console.log('Map has been initialized.');
 document.addEventListener("DOMContentLoaded", function () {
     // Initialize the map
     var map = L.map('map').setView([-36.72478, 174.69387], 13);
@@ -73,6 +73,5 @@ document.addEventListener("DOMContentLoaded", function () {
     L.control.scale().addTo(map);
 
     // Customize the map further if needed
-
     // You can add more layers, controls, and functionality here.
 });
