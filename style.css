@@ -1,0 +1,474 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+   
+}
+
+#colour img{
+    background-color: whitesmoke;
+    border-radius: 50%;
+}
+#colour img a{
+    color: #fff;
+}
+#navbar{
+
+  position: sticky;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #045b5b;
+   /*  padding: 30px 18%; */
+    transition: ease .40s;
+    box-shadow: 5px 10px 30px rgb(85 85 85 /20%);
+
+}
+
+.navbar-brand{
+    padding-right: 50px;
+}
+#colour span{
+    color: orangered;
+}
+
+
+.navbar-toggler span{
+    color: orangered;
+
+    
+}
+
+.nav-item .nav-link{
+    font-size: 16px;
+    color:#ffff;
+    border-radius: 20px;
+  
+    
+ 
+}
+.nav-item .nav-link:hover{
+    /* background-color: rgb(216, 109, 80); */
+    color: orangered;
+  
+}
+#navbar form button{
+    background-color: rgb(228, 228, 228);
+    color:black;
+   /*  border-radius: 20px; */
+    border: none;
+   
+}
+.home{
+    width: 100%;
+    height: 90vh;
+    background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(/images/paths/pic1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+}
+.home .content{
+    text-align: center;
+    padding-top: 20px;
+    overflow: hidden;
+    height: 45%;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10%;
+     
+}
+
+.home .content h4{
+    color: white;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 2px; 
+   
+}
+.content .words{
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    
+   
+}
+.content .words span{
+    display: block;
+    height: 40%;
+    margin-left: 25%;
+    width: 50%;
+    animation: spin_words 10s infinite;
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 2px; 
+    padding-top: 8px;
+    scroll-behavior: smooth;
+ 
+}
+
+@keyframes spin_words{
+    10%{
+        transform: translateY(-112%);
+    }
+    25%{
+        transform: translateY(-100%);
+    }
+    35%{
+        transform: translateY(-212%);
+    }
+    50%{
+        transform: translateY(-200%);
+    
+    }
+    60%{
+        transform: translateY(-312%);
+    }
+    75%{
+        transform:translateY(-300%) ;
+    }
+    85%{
+        transform: translateY(-412%);
+    }
+    100%{
+        transform: translateY(-400%);
+    }
+}
+
+
+@media (max-width:850px){
+    .home{
+background-position: 50%;
+    }
+    .home .offer{
+        background-position: 50%;
+        width: 20%;
+    }
+    .home .offer .row {
+        font-size: 20px;
+        
+    }
+}
+@media(max-width:576px){
+
+    .searchbox .inputBx{
+       width: 100%;
+       padding: 20px;
+    }
+    .home.offer{
+       height: 100%;
+      padding-bottom: 10%;
+
+    }
+    .home .content h4{
+        font-size: 20px;
+        padding-top: 6%;
+      
+    }
+
+
+.aboutus .clearfix img{
+
+    width: 100%;
+
+}
+.aboutus .clearfix{
+    font-size: 15px;
+}
+.aboutus .clearfix #explore{
+   font-size: 12px;
+}
+
+.home .offer{
+    margin-bottom: 8%;
+}
+}
+@media(max-width:600px){
+    .home.offer{
+        height: 100%;
+ 
+     }
+     .home .content h4{
+         font-size: 20px;
+         padding-top: 2%;
+       
+     }
+ 
+     .home .content .words span{
+         font-size:20px;     
+         justify-content: center;  
+ }
+ 
+ 
+ .home .offer .icon{
+     font-size:15px;
+ }
+ .home .offer .row{
+     font-size:10px;
+
+   
+ }
+ .home .offer button{
+    
+     font-size: 15px;
+ }
+ .aboutus .clearfix img{
+ 
+     width: 100%;
+ 
+ }
+ .aboutus .clearfix{
+     font-size: 15px;
+ }
+ .aboutus .clearfix #explore{
+    font-size: 12px;
+ }
+ 
+ .home .offer{
+     margin-bottom: 8%;
+ }
+}
+@media(max-width:780px){
+    .home .offer button{
+   
+        font-size: 10px;
+    }
+    #newsletter p{
+        font-size: 15px;
+    }
+    .home .offer .row {
+        font-size: 20px;
+        
+    }
+}
+
+ .home .offer{
+  /*   background-color: white; */
+    border-radius: 20px;
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 8%;
+    /* box-shadow: -15px -15px 15px -15px #b0e2ff; */
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    gap: 2rem;
+    /* border: 1px solid white; */
+
+} 
+.home .offer .row{
+   /*  background-color: white; */
+    color: white;
+    opacity: 0.9;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.row h3{
+    color: orange;
+    margin-top: 30%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+ 
+}
+.row .line{
+    height: 2px;
+    width: 100px;
+    background-color: red;
+}
+.row h6{
+    color: grey;
+}
+
+ h1{
+    text-align: center;
+    margin-top: 50px;
+  
+}
+
+.about .row {
+   margin-top: 2%;
+   /* background-color: red; */
+
+}
+
+.about .row h1{
+  /* margin-top: 2%; */
+  text-align: center;
+    margin-top: 100px;
+  
+}
+.about .row h5{
+
+    padding: 2%;
+}
+.row .one{
+  /*   border: 2px solid blue; */
+    padding: 2%;
+    border-top:10;
+    box-shadow: 15px 15px 15px 15px whitesmoke;
+}
+.row .two{
+   /*  border: 2px solid blue; */
+    padding: 2%;
+    border-top:10;
+    box-shadow: 15px 15px 15px 15px whitesmoke;
+}
+.row .three{
+   /*  border: 2px solid blue; */
+    padding: 2%;
+    border-top:10;
+    box-shadow: 15px 15px 15px 15px whitesmoke;
+}
+
+.aboutus .row h1{
+    /* margin-top: 2%; */
+    text-align: center;
+      margin-top: 100px;
+     
+  }
+
+  .clearfix{
+    padding-top: 5%;
+  }
+
+
+  .newsletter .row{
+
+    margin: 10%;
+    /* background-color: red; */
+    box-shadow: 15px 15px 15px 15px whitesmoke;
+    
+  }
+.newsletter p{
+    justify-content: center;
+}
+.newsletter form{
+    margin-top: 20%;
+    box-shadow: 15px 15px 15px 15px whitesmoke;
+}
+#footer1{
+    background-color: #045b5b;
+    opacity: 0.8;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.footer1 h5{
+    padding: 2%;
+    margin-top: 2%;
+}
+.footer1 ol{
+    margin-left: -30px;
+}
+.footer1 ol:hover{
+
+    transition: all 0.3s;
+ transform: scale(1.05);
+ cursor: pointer;
+ 
+}
+.footer1 i{
+    padding: 5px;
+    cursor: pointer;
+}
+.footer1 i:hover{
+    transition: all 0.4s;
+    transform: scale(2);
+    cursor: pointer;
+    background:linear-gradient(45deg,#ffbc00,#e77ea3);
+    border-radius: 20px;
+}
+h5 a{
+    text-decoration: none;
+    color: white;
+}
+/* Animation trying */
+
+#north:hover{
+   
+    cursor: pointer;
+}
+
+#east:hover{
+   
+    cursor: pointer;
+}
+#west:hover{
+  
+    cursor: pointer;
+}
+#south:hover{
+  
+    cursor: pointer;
+}
+#destination img:hover{
+    transition: all 0.3s;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+#destination .card{
+    box-shadow: 15px 15px 15px -15px orangered;
+    cursor: pointer;
+}
+#destination a{
+    text-decoration: none;
+    color: black;
+}
+.packages1 .card{
+    box-shadow: 15px -15px 15px -15px orangered;
+}
+#about .row .one:hover{
+    background:linear-gradient(45deg,#ffbc00,#e77ea3);
+   
+    transition: all 0.3s;
+    transform: scale(1.05);
+   
+}
+#about .row .two:hover{
+    background:linear-gradient(45deg,#ffbc00,#e77ea3);
+   
+    transition: all 0.3s;
+    transform: scale(1.05);
+   
+}
+#about .row .three:hover{
+    background:linear-gradient(45deg,#ffbc00,#e77ea3);
+   
+    transition: all 0.3s;
+    transform: scale(1.05);
+   
+}
+.footer1 a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Add this CSS to your style.css file or inline in your HTML head section */
+#map {
+    height: 400px;
+    width: 100%; /* Use the full width of the container */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Customize the popup appearance */
+.leaflet-popup-content {
+    font-size: 14px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

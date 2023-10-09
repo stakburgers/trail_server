@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+    <link rel="stylesheet" href="./style.css">
+    
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+    <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar starts  -->
+<nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+    <div class="container" >
+      <a class="navbar-brand" href="index.html" id="colour"><i class="fa-solid fa-person-biking"></i>&nbsp;<B>AKL</B><span>Paths</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span ><i class="fa-solid fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item" >
+            <a class="nav-link" href="index.html">Home &nbsp;</a>
+          </li>
+       
+          <li class="nav-item">
+            <a class="nav-link " href="maps.html"><i class="fa-solid fa-location-dot"></i>&nbsp;Maps&nbsp;</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link " href="about.html">About &nbsp;</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link " href="contact.html">Contact&nbsp;</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="text" placeholder="Search">
+          <button class="btn btn-primary" type="button">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<!-- Navbar Stops -->
+<!-- Destination Content starts here -->
+<br>
+<section class="destination" id="destination">
+  <div class="container">
+    <div class="row">
+      <h1> <i class="fa-solid fa-person-biking"></i> Maps</h1>
+    </div>
+   <div class="row"><br><br></div>
+      <div class="row">
+        <h2> North - Auckland</h2>
+      <div class="col-lg-3 col-lg-4 col-md-12 col-sm-12 p-5 ">
+        <div class="card" style="width: 18rem;">
+          <img src="./images/paths/map-1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-text"><a href="albany.html">Albany Village Path </a></h5><i class="fa-solid fa-person-walking"></i> 40 mins&nbsp;&nbsp;<i class="fa-solid fa-circle-notch"></i> 2.8km <br><br>
+
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-lg-4 col-md-12 col-sm-12 p-5">
+        <div class="card" style="width: 18rem;">
+          <img src="./images/paths/map-2.jfif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="devonport.html">Devonport-Torpedo BayPath</a></h5></h5><i class="fa-solid fa-person-biking"></i> 20 mins&nbsp;&nbsp;<i class="fa-solid fa-circle-notch"></i> 2.5km
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-lg-4 col-md-12 col-sm-12 p-5">
+        <div class="card" style="width: 18rem;">
+          <img src="/images/paths/map-3.jfif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-text"><a href="shephards.html">Shepherds Park Path</a></h5><i class="fa-solid fa-person-biking"></i> 5 mins&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-person-walking"></i> 10 mins &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-circle-notch"></i> 2.5km <br><br>
+            
+          </div>
+        </div>
+      </div>
+       
+      </div>
+   
+
+      <div class="row">
+        <h2> East - Auckland</h2>
+        <div class="col-lg-3 col-lg-4 col-md-12 col-sm-6 p-5 ">
+          <div class="card" style="width: 18rem;">
+            <img src="/images/paths/map-4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-text"><a href="barrys.html">Barry Curtis Path</a></h5><i class="fa-solid fa-person-biking"></i> 10 mins&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-person-walking"></i> 20 mins &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-circle-notch"></i> 1.8km <br><br>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-lg-4 col-md-12 col-sm-6 p-5">
+          <div class="card" style="width: 18rem;">
+            <img src="/images/paths/map-5.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><a href="beachlands.html">Beachlands to MaraetaiPath</a></h5><p><i class="fa-solid fa-person-biking"></i> 45 mins&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-circle-notch"></i> 2.5km</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-lg-4 col-md-12 col-sm-2 p-5">
+          <div class="card" style="width: 18rem;">
+            <img src="/images/paths/map-6.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-text"><a href="bucklands.html">Bucklands Beach Path</a></h5><p><i class="fa-solid fa-person-walking"></i> 60 mins &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-circle-notch"></i> 5.2km</p>
+            </div>
+          </div>
+        </div>
+         
+        </div>
+        
+      <div class="row">
+        <h2> West - Auckland</h2>
+        <div class="col-lg-3 col-lg-4 col-md-12 col-sm-6 p-5 ">
+          <div class="card" style="width: 18rem;">
+            <img src="/images/paths/map-7.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-text"><a href="archibald.html">Archibald Park Path</a></h5><i class="fa-solid fa-person-biking"></i> 10 mins&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-person-walking"></i> 20 mins &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-circle-notch"></i> 1.5km <br><br>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-lg-4 col-md-12 col-sm-6 p-5">
+          <div class="card" style="width: 18rem;">
+            <img src="/images/paths/map-8.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><a href="birdwood.html">Birdwood Path</a></h5><i class="fa-solid fa-person-biking"></i> 30 mins&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-person-walking"></i> 50 mins &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-circle-notch"></i> 4km <br><br>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-lg-4 col-md-12 col-sm-2 p-5">
+          <div class="card" style="width: 18rem;">
+            <img src="/images/paths/map-9.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-text"><a href="Craigavon.html">Craigavon Path</a></h5><i class="fa-solid fa-person-walking"></i> 10 mins &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-circle-notch"></i> 730m <br><br>
+            </div>
+          </div>
+        </div>
+     
+        </div>
+        
+      <div class="row">
+        <h2> South - Auckland</h2>
+        <div class="col-lg-3 col-lg-4 col-md-12 col-sm-6 p-5 ">
+          <div class="card" style="width: 18rem;">
+            <img src="/images/paths/map-10.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-text"><a href="ambury.html">Ambury Farm Path</a></h5><i class="fa-solid fa-person-walking"></i> 70 mins &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-circle-notch"></i> 5.5km <br><br>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-lg-4 col-md-12 col-sm-6 p-5">
+          <div class="card" style="width: 18rem;">
+            <img src="/images/paths/map-11.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><a href="clendon.html">Clendon Path</a></h5><i class="fa-solid fa-person-biking"></i> 30 mins&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-person-walking"></i> 70 mins &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-circle-notch"></i> 5.5km <br><br>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-lg-4 col-md-12 col-sm-2 p-5">
+          <div class="card" style="width: 18rem;">
+            <img src="/images/paths/map-12.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-text"><a href="hunua.html">Hunua Falls Track</a></h5><i class="fa-solid fa-person-walking"></i> 15 mins &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-circle-notch"></i> 800m <br><br>
+            </div>
+            </div>
+          </div>
+        </div>
+         
+        </div>
+    </div>
+  
+</section>
+<hr>
+<!-- Destination Content ends here  -->
+      <!-- Footer starts -->
+<section class="footer1" id="footer1">
+    <div class="container">
+      <div class="row">
+       <div class="col-lg-3 col-md-6 col-sm-12">
+        <h5>Quick Links</h5>
+        <div class="line"></div>
+        <ol>
+          <div class="li">About us</div>
+          <div class="li">Terms & Conditions</div>
+          <div class="li">Privacy Policy</div>
+          <div class="li">Help</div>
+          <div class="li">Tour</div>
+        </ol>
+      </div>
+       <div class="col-lg-3 col-md-6 col-sm-12">
+        <h5>Support</h5>
+        <div class="line"></div>
+        <ol>
+          <div class="li">Our Location</div>
+          <div class="li">The Host</div>
+          <div class="li">Contact</div>
+          <div class="li">News</div>
+          <div class="li">Reviews</div>
+        </ol>
+       </div>
+       <div class="col-lg-3 col-md-6 col-sm-12">
+        <h5>Contact Info</h5>
+        <div class="line"></div>
+        <ol>
+            <div class="li">Building No.2 </div>
+            <div class="li">Auckland</div>
+            <div class="li">09- 8909890</div>
+            <div class="li">09- 8909890</div>
+            <div class="li">info@aklpath.co.nz</div>
+        </ol>
+       </div>
+       <div class="col-lg-3 col-md-6 col-sm-12">
+        <h5>Connect</h5>
+        <div class="line"></div>
+        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a> 
+      <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a><br> <br>
+       </div>
+       <div class="copyright"> copyright &copy;2023 All rights reserved | aklpath.co.nz</div>
+      </div>
+      </div>
+  <br><br>
+    </section>
+  </section>
+  
+  <!-- Footer ends -->
+</body>
+</html>
