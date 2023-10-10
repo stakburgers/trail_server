@@ -4,43 +4,54 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Create a PostgreSQL connection pool
+// Create a PostgreSQL connection pool
 const pool = new Pool({
   user: 'postgres',
   host: 'localhost',
-  database: 'DOCData',
-  password: 'Group03',
+  database: 'postgres',
+  password: 'postgres',
   port: 5432,
 });
 
 // Serve static files from the 'public' directory
 app.use(express.static('public'));
 
-// Define a route to retrieve trail coordinates by ogc_fid
-app.get('/trail_coordinates/:ogc_fid', async (req, res) => {
-  const { ogc_fid } = req.params; // Get the ogc_fid from the URL parameter
+// Define a route to fetch trail coordinates
+app.get('/trail_coordinates/:trailName', async (req, res) => {
+  const trailName = req.params.trailName;
 
   try {
-    const client = await pool.connect(); // Get a connection from the pool
+      // Query your database to retrieve the binary geometries based on the trail name
+      const result = await pool.query(
+          'SELECT wkb_geometry FROM your_table WHERE trail_name = $1',
+          [trailName]
+      );
 
-    // Query to retrieve trail coordinates based on the specified TrailName
-    const result = await client.query('SELECT wkb_geometry FROM docdatatable WHERE ogc_fid = $1', [trailName]);
+      // Convert binary geometries to GeoJSON
+      const geoJSONFeatures = result.rows.map((row) => {
+          const wktGeometry = row.wkb_geometry;
+          const geoJSONGeometry = wellknown(wktGeometry); // Convert WKT to GeoJSON
+          return {
+              type: 'Feature',
+              geometry: geoJSONGeometry,
+              properties: {}, // You can add more properties here if needed
+          };
+      });
 
-    client.release(); // Release the connection back to the pool
+      // Create a GeoJSON FeatureCollection
+      const geoJSON = {
+          type: 'FeatureCollection',
+          features: geoJSONFeatures,
+      };
 
-    if (result.rows.length === 0) {
-      // If no matching records are found, return a 404 Not Found response
-      res.status(404).json({ error: 'Trail not found' });
-    } else {
-      // Return the query result as JSON
-      res.json(result.rows);
-    }
-  } catch (err) {
-    console.error('Error executing query', err);
-    res.status(500).send('Internal Server Error');
+      // Respond with the GeoJSON data
+      res.json(geoJSON);
+  } catch (error) {
+      console.error('Error:', error);
+      res.status(500).json({ error: 'Internal server error' });
   }
 });
 
-
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Server listening on port ${port}`);
 });
