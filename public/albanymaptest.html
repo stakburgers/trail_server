@@ -33,10 +33,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
-    <!-- Include map initialization script -->
-    <script src="map.js"></script>
 </head>
 <body>
+    <!-- Include map initialization script -->
+    <script src="map.js"></script>
+    
+    <script>
+        // Set the trail parameter in the JavaScript code
+        var trail = "albany";
+    </script>
+
     <!-- Navbar starts  -->
     <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
         <div class="container">
@@ -80,24 +86,22 @@
                 <div class="clearfix">
                     <div class="row">
                         <div class="col-md-6">
-                            <p><h2>About
-
-<p><h2>About the path</h2>
+                            <p><h2>About the path</h2>
   A pleasant stroll connecting Albany village with Lucas Creek and local scenic reserves.
   Start your walk outside the Albany Village Library. Enter Kell Park, where you'll find a small children's playground and flying fox.
   Head down the steps and discover the viewing platform overlooking native bush and Lucas Creek. Cross the bridge over the creek and stroll through the reserve past the basketball court until you reach Albany Highway.
   Follow the separated walking path on Albany Highway for a short distance, then turn right into Wharf Road. At the end of Wharf Road, turn right and walk along the grass path along the Albany Creek Esplanade Reserve. If the grass is muddy, use the alternative route of Landing Drive.
   The esplanade pathway connects up to the concrete path through The Landing Reserve and back to Albany village. The Landing Reserve offers an off-leash dog exercise area.</p>
-<h4>Facilities</h4><br>
+<br><h4>Facilities</h4><br>
 <p><i class="fa-solid fa-restroom fa-2xl"></i>&nbsp;Public toilet</p><br>
 <p><i class="fa-solid fa-person-arrow-down-to-line fa-2xl"></i>&nbsp;Playground</p><br>
 <p><i class="fa-solid fa-dog fa-2xl"></i>&nbsp;Dog off-leash area near this path</p><br>
-<p><i class="fa-solid fa-book-open fa-2xl"></i>&nbsp;Library</p>
+<p><i class="fa-solid fa-book-open fa-2xl"></i>&nbsp;Library</p><br>
 <hr>
 </div>
 <div class="col-md-6">
 <!-- Place the map here -->
-<div id="map" style="height: 400px;"></div>
+<div id="albany-map" style="height: 400px;"></div>
 </div>
 </div>
 </div>
