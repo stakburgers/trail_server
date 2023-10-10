@@ -7,23 +7,23 @@ const port = process.env.PORT || 3000;
 const pool = new Pool({
   user: 'postgres',
   host: 'localhost',
-  database: 'postgres',
-  password: 'postgres',
+  database: 'DOCData',
+  password: 'Group03',
   port: 5432,
 });
 
 // Serve static files from the 'public' directory
 app.use(express.static('public'));
 
-// Define a route to retrieve trail coordinates by TrailName
-app.get('/trail_coordinates/:trailName', async (req, res) => {
-  const { trailName } = req.params; // Get the trailName from the URL parameter
+// Define a route to retrieve trail coordinates by ogc_fid
+app.get('/trail_coordinates/:ogc_fid', async (req, res) => {
+  const { ogc_fid } = req.params; // Get the ogc_fid from the URL parameter
 
   try {
     const client = await pool.connect(); // Get a connection from the pool
 
     // Query to retrieve trail coordinates based on the specified TrailName
-    const result = await client.query('SELECT * FROM TrailCoordinates WHERE TrailName = $1', [trailName]);
+    const result = await client.query('SELECT wkb_geometry FROM docdatatable WHERE ogc_fid = $1', [trailName]);
 
     client.release(); // Release the connection back to the pool
 
