@@ -1,123 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ambury</title>
     <link rel="stylesheet" href="./style.css">
-
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        crossorigin=""/>
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <!-- Leaflet JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin=""></script>
-
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <!-- Leaflet Search Plugin -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.css">
     <script src="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.js"></script>
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
-</head>
-<body>
     <!-- Include map initialization script -->
-
-    <!--  <script src="map.js"></script> -->
     <script src="map.js"></script>
-
-
-  <!-- Navbar starts  -->
-<nav class="navbar navbar-expand-lg fixed-top" id="navbar">
-    <div class="container" >
-      <a class="navbar-brand" href="index.html" id="colour">
-        <i class="fa-solid fa-person-biking"></i>&nbsp;<strong>AKL</strong><span>Paths</span>
-    </a>
-    
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-        <span ><i class="fa-solid fa-bars"></i></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mynavbar">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item" >
-            <a class="nav-link" href="index.html">Home &nbsp;</a>
-          </li>
-        
-          <li class="nav-item">
-            <a class="nav-link " href="maps.html"><i class="fa-solid fa-location-dot"></i>&nbsp;Maps&nbsp;</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link " href="about.html">About &nbsp;</a>
-          </li>
-        
-          <li class="nav-item">
-            <a class="nav-link " href="contact.html">Contact&nbsp;</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="text" placeholder="Search">
-          <button class="btn btn-primary" type="button">Search</button>
-        </form>
+  </head>
+  <body>
+    <!-- Navbar starts -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" id="colour">
+          <i class="fa-solid fa-person-biking"></i>&nbsp; <B>AKL</B>
+          <span>Paths</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span>
+            <i class="fa-solid fa-bars"></i>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home &nbsp;</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="maps.html">
+                <i class="fa-solid fa-location-dot"></i>&nbsp;Maps&nbsp; </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="about.html">About &nbsp;</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="contact.html">Contact&nbsp;</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="text" placeholder="Search">
+            <button class="btn btn-primary" type="button">Search</button>
+          </form>
+        </div>
       </div>
-    </div>
-  </nav>
-<!-- Navbar Stops -->
-<section class="aboutus" id="aboutus">
-  <div class="container">
-      <div class="row">
-          <h1>Ambury Farm Path</h1><br>
-          <p><i class="fa-solid fa-person-walking"></i> 10 mins&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-circle-notch"></i> 700m</p>
-      </div>
-      <div class="row">
+    </nav>
+    <!-- Navbar Stops -->
+    <section class="aboutus" id="aboutus">
+      <div class="container">
+        <div class="row">
+          <h1>Ambury Farm Path</h1>
+          <br>
+          <p>
+            <i class="fa-solid fa-person-walking"></i> 10 mins&nbsp;&nbsp;&nbsp; <i class="fa-solid fa-circle-notch"></i> 700m
+          </p>
+        </div>
+        <div class="row">
           <img src="/images/paths/map-10.jpg">
           <div class="clearfix">
             <div class="row">
-              <div class="col-md-6">       
-       <p>
-            <h2>About the path</h2>
-            Bring the whānau to meet some farm animals on this fun walk around Ambury Farm in Māngere Bridge.
-
-The path is a mix of grass path and gravel tracks. There is pushchair and wheelchair access around the farm animal enclosures, though these may be inaccessible in wet conditions.
-
-From the car park, head toward the woolshed and milking shed.
-
-Wander through the grassy lanes between the animal enclosures and take your time getting to know the animals. You can see sheep, lambs (seasonal from mid July), goats, cows, pigs, chickens, turkey, rabbits and maybe an elusive peacock.
-
-You're welcome to enter the paddocks to mingle with the animals, except during lambing season (mid-July and early August). Please leave the gates as you find them.</p>
-<br><h4>Facilities</h4><br>
-<p><i class="fa-solid fa-restroom fa-2xl"></i>&nbsp;Public toilet</p><br>
-<p><i class="fa-solid fa-person-arrow-down-to-line fa-2xl"></i>&nbsp;Playground</p><br>
-<p><i class="fa-solid fa-dog fa-2xl"></i>&nbsp;Dog off-leash area near this path</p><br>
-<hr>
-</div>
-<div class="col-md-6">
-    <!-- Place the map here -->
-    <div id="ambury-map" style="height: 400px;"></div>
-</div>
-</div>
-</div>
-</div>
-</section>
-      <!-- Footer starts -->
-      <section class="footer1" id="footer1">
-        <div class="container">
-          <div class="row">
-           <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="col-md-6">
+                <h2>About the path</h2>
+                <p>Bring the whānau to meet some farm animals on this fun walk around Ambury Farm in Māngere Bridge. The path is a mix of grass path and gravel tracks. There is pushchair and wheelchair access around the farm animal enclosures, though these may be inaccessible in wet conditions. From the car park, head toward the woolshed and milking shed. Wander through the grassy lanes between the animal enclosures and take your time getting to know the animals. You can see sheep, lambs (seasonal from mid July), goats, cows, pigs, chickens, turkey, rabbits and maybe an elusive peacock. You're welcome to enter the paddocks to mingle with the animals, except during lambing season (mid-July and early August). Please leave the gates as you find them.</p>
+                <br>
+                <h4>Facilities</h4>
+                <br>
+                <p>
+                  <i class="fa-solid fa-restroom fa-2xl"></i>&nbsp;Public toilet
+                </p>
+                <br>
+                <p>
+                  <i class="fa-solid fa-person-arrow-down-to-line fa-2xl"></i>&nbsp;Playground
+                </p>
+                <br>
+                <p>
+                  <i class="fa-solid fa-dog fa-2xl"></i>&nbsp;Dog off-leash area near this path
+                </p>
+                <hr>
+              </div>
+              <div class="col-md-6">
+                <!-- Place the map here -->
+                <div id="map" data-trail="ambury" style="height: 400px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- Footer starts -->
+    <section class="footer1" id="footer1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-12">
             <h5>Quick Links</h5>
             <div class="line"></div>
             <ol>
@@ -128,7 +116,7 @@ You're welcome to enter the paddocks to mingle with the animals, except during l
               <div class="li">Tour</div>
             </ol>
           </div>
-           <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="col-lg-3 col-md-6 col-sm-12">
             <h5>Support</h5>
             <div class="line"></div>
             <ol>
@@ -138,34 +126,42 @@ You're welcome to enter the paddocks to mingle with the animals, except during l
               <div class="li">News</div>
               <div class="li">Reviews</div>
             </ol>
-           </div>
-           <div class="col-lg-3 col-md-6 col-sm-12">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
             <h5>Contact Info</h5>
-            <div class="line"></div>
+            <div class "line"></div>
             <ol>
-                <div class="li">Building No.2 </div>
-                <div class="li">Auckland</div>
-                <div class="li">09- 8909890</div>
-                <div class="li">09- 8909890</div>
-                <div class="li">info@aklpath.co.nz</div>
+              <div class="li">Building No.2</div>
+              <div class="li">Auckland</div>
+              <div class="li">09-8909890</div>
+              <div class="li">09-8909890</div>
+              <div class="li">info@aklpath.co.nz</div>
             </ol>
-           </div>
-           <div class="col-lg-3 col-md-6 col-sm-12">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
             <h5>Connect</h5>
             <div class="line"></div>
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a> 
-            <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a><br> <br>
-           </div>
-           <div class="copyright"> copyright &copy;2023 All rights reserved | aklpath.co.nz</div>
+            <a href="https://www.facebook.com/">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com/">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://in.linkedin.com/">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.youtube.com/">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <br>
+            <br>
           </div>
-          </div>
-      <br><br>
-        </section>
-      </section>
-      
-      <!-- Footer ends -->
-    </body>
-    </html>
+          <div class="copyright"> copyright &copy;2023 All rights reserved | aklpath.co.nz</div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
